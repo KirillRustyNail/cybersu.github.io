@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './css/CategorySection.css';
 
 function CategorySection({ title, subCategories, categoryId }) {
   return (

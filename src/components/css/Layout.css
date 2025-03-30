@@ -9,24 +9,36 @@
   color: white;
   padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header-left, .header-right {
-  display: flex;
-  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .home-link {
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
 .home-link:hover {
   text-decoration: underline;
+}
+
+.subcategory-title {
+  margin: 0 20px;
+  text-align: center;
+  flex-grow: 1;
+  font-size: 1.2rem;
 }
 
 .support-link {
@@ -36,6 +48,7 @@
   border: 1px solid white;
   border-radius: 4px;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .support-link:hover {
