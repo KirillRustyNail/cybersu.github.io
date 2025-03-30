@@ -1,26 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import SubCategoryPage from './components/SubCategoryPage';
-import Layout from './components/Layout';
-import SupportPage from './components/SupportPage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import SubCategoryPage from './pages/SubCategoryPage';
+import Layout from './components/layout/Layout';
 import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout><HomePage /></Layout>} />
-        <Route 
-          path="/subcategory/:categoryId/:subCategoryId" 
-          element={<Layout><SubCategoryPage /></Layout>} 
-        />
-        <Route 
-          path="/support" 
-          element={<Layout><SupportPage /></Layout>} 
-        />
-      </Routes>
-    </Router>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/:categoryId/:subCategoryId" element={<SubCategoryPage />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
