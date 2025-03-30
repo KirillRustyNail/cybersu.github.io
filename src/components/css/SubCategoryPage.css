@@ -1,0 +1,16 @@
+.subcategory-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .subcategory-page h2 {
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .subcategory-page .content {
+    margin-top: 20px;
+    line-height: 1.6;
+  }
