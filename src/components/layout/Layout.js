@@ -11,22 +11,24 @@ function Layout({ children }) {
   return (
     <div className="app-container">
       <header className="app-header">
-        <div className="header-left">
-          <Link to="/" className="home-link">
-            <p>Дата-Пул</p>
-          </Link>
-        </div>
-        
-        {isSubcategoryPage && (
-          <div className="header-center">
-            {currentSubcategory.replace(/-/g, ' ')}
+        <div className="app-header-inner">
+          <div className="header-left">
+            <Link to="/" className="home-link">
+              <p>Дата-Пул</p>
+            </Link>
           </div>
-        )}
+          
+          {isSubcategoryPage && (
+            <div className="header-center">
+              {currentSubcategory.replace(/-/g, ' ')}
+            </div>
+          )}
 
-        <div className="header-right">
-          <Link to="/support/gm-place" className="support-link">
-            Поддержка
-          </Link>
+          <div className="header-right">
+            <Link to="/support/gm-place" className="support-link">
+              Поддержка
+            </Link>
+          </div>
         </div>
       </header>
       
